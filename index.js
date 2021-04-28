@@ -10,7 +10,8 @@ const mongoose = require('mongoose')
 
 mongoose.connect(config.dataBaseUrl, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
 } ,(err) => {
     if (err) {
         console.error('error', err)

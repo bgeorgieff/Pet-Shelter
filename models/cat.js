@@ -13,10 +13,10 @@ const PetSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    breeds: [{
-        type: 'ObjectId',
-        ref: 'Breed'
-    }]
+    breed: {
+        type: String,
+        required: true
+    }
 })
 
 module.exports = mongoose.model('Pet', PetSchema)

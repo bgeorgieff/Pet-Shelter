@@ -5,7 +5,7 @@ const handlebars = require('express-handlebars')
 module.exports = (app) => {
     // app.use(cookieParser())
     app.use(express.json())
-    app.use(express.urlencoded({ extended: true }))
+    app.use(express.urlencoded({ extended: false }))
     app.engine('.hbs', handlebars({
         extname: '.hbs'
     }));
